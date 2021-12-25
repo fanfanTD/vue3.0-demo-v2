@@ -1,7 +1,7 @@
 <template>
   <Suspense>
     <template #default>
-      <Timeline></Timeline>
+      <PostEditor></PostEditor>
     </template>
     <template #fallback>
         <Progress></Progress>
@@ -12,15 +12,15 @@
 <script>
 // import { defineComponent } from '@vue/composition-api'
 import { ref, computed, reactive, toRefs, watch, defineComponent } from 'vue';
-import Timeline from '@/components/Timeline.vue';
+import PostEditor from '@/components/PostEditor.vue';
 import Progress from '@/components/Progress.vue';
 
 export default defineComponent({
-  name: 'home',
+  name: 'ShowPost',
   props: {
     title: String
   },
-  components: { Timeline, Progress },
+  components: { PostEditor, Progress },
   setup(props, context) {
   },
 })
